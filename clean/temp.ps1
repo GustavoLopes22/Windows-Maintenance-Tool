@@ -13,4 +13,4 @@ foreach ($path in $paths) {
     }
 }
 
-Write-Host "[1/3] >>> TEMP: limpeza finalizada" -ForegroundColor Green
+Write-Host "[1/3] >>> Limpeza finalizada" -ForegroundColor Green
