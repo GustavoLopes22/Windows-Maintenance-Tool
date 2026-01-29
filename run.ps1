@@ -33,5 +33,6 @@ Start-Transcript -Path $logFile -Append | Out-Null
 Stop-Transcript | Out-Null
 
 Write-Host ""
-Write-Host "Execução finalizada" -ForegroundColor Green
-Write-Host "Log salvo em $logFile" 
+Write-Host "Processo finalizado com sucesso!" -ForegroundColor Green
+
+Write-Host "Log salvo em $logFile" -ForegroundColor Yellow
