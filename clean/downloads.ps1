@@ -22,4 +22,4 @@ foreach ($file in $files) {
     }
 }
 
-Write-Host "[3/3] ► Organizing downloads folder..." -ForegroundColor Cyan
+Write-Host "[3/3] - Organizing downloads folder..." -ForegroundColor Cyan

@@ -13,4 +13,4 @@ foreach ($path in $paths) {
     }
 }
 
-Write-Host "[1/3] ► Cleaning temporary files..." -ForegroundColor Cyan
+Write-Host "[1/3] - Cleaning temporary files..." -ForegroundColor Cyan

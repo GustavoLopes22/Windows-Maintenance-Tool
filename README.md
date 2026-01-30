@@ -37,5 +37,7 @@ The script behavior can be controlled in the `config.ps1` file through the `$DRY
 ## ▶️ How to Run
 
 To execute the tool, open PowerShell and run the following commands:
-`Set-ExecutionPolicy Bypass -Scope Process`
-`./run.ps1`
+`Set-ExecutionPolicy Bypass -Scope Process`  
+`./run.ps1`  
+
+The execution policy change applies only to the current PowerShell session and does not affect system-wide security settings.

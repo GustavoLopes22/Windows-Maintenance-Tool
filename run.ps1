@@ -12,6 +12,7 @@ Write-Host @"
 
  WINDOWS MAINTENANCE TOOL
 "@ -ForegroundColor Cyan
+Write-Host ""
 
 . .\config.ps1
 
