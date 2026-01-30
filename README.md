@@ -41,3 +41,7 @@ To execute the tool, open PowerShell and run the following commands:
 `./run.ps1`  
 
 The execution policy change applies only to the current PowerShell session and does not affect system-wide security settings.
+
+---
+
+To install task schedule, execute `.\install-task.ps1`
