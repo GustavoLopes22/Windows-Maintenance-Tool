@@ -7,12 +7,12 @@ if ($MOVE_INSTEAD_DELETE -and !(Test-Path $oldFolder)) {
 
 $limitDate = (Get-Date).AddDays(-$DAYS_OLD_DOWNLOADS)
 
-$files = Get-ChildItem $downloads -File -ErrorAction SilentlyContinue |
+$files = Get-ChildItem $downloads -ErrorAction SilentlyContinue |
 Where-Object { $_.LastWriteTime -lt $limitDate }
 
 foreach ($file in $files) {
     if ($DRY_RUN) {
-        Write-Output "Dry-run: would move $($file.Name)" -ForegroundColor DarkGray
+        Write-Host "Dry-run: would move $($file.Name)" -ForegroundColor DarkGray
     } else {
         if ($MOVE_INSTEAD_DELETE) {
             Move-Item $file.FullName $oldFolder -Force
