@@ -16,6 +16,9 @@ Write-Host ""
 
 . .\config.ps1
 
+$global:TOTAL_FILES = 0
+$global:TOTAL_BYTES = 0
+
 if (!(Test-Path ".\logs")) {
     New-Item -ItemType Directory -Path ".\logs" | Out-Null
 }
@@ -32,5 +35,12 @@ Stop-Transcript | Out-Null
 
 Write-Host ""
 Write-Host "All tasks completed." -ForegroundColor Green
+
+$mb = [math]::Round($TOTAL_BYTES / 1MB, 2)
+
+Write-Host "-----------------------------------" -ForegroundColor DarkGray
+Write-Host "Files processed : $TOTAL_FILES" -ForegroundColor DarkGray
+Write-Host "Space freed     : $mb MB" -ForegroundColor DarkGray
+Write-Host "-----------------------------------" -ForegroundColor DarkGray
 
 Write-Host "Log saved at: $logFile" -ForegroundColor DarkGray
