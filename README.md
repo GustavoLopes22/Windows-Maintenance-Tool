@@ -1,34 +1,41 @@
 # WMT — Windows Maintenance Tool
 
-Ferramenta simples em PowerShell para manutenção e limpeza básica do Windows, focada em manter o sistema limpo, organizado e com melhor desempenho no dia a dia.
+A simple PowerShell tool for basic Windows maintenance and cleanup, focused on keeping the system clean, organized, and performing better in daily use.
 
-Projeto criado para automatizar tarefas recorrentes como limpeza de arquivos temporários, lixeira e organização da pasta Downloads.
-
----
-
-## 🚀 Funcionalidades
-
-- Limpeza de arquivos temporários do sistema
-- Esvaziamento da lixeira
-- Organização da pasta Downloads (arquivos antigos)
-- Execução modular (scripts separados)
-- Geração automática de log
-- Compatível com Windows PowerShell 5.1+
+This project was created to automate recurring tasks such as cleaning temporary files, emptying the Recycle Bin, and organizing the Downloads folder.
 
 ---
 
-## 🛡️ Observações
+## 🚀 Features
 
-- Scripts utilizam apenas comandos nativos do Windows
-- Projeto utiliza apenas caracteres ASCII (compatível com ambientes corporativos)
-- Recomenda-se testar os scripts antes de uso em produção
+- System temporary files cleanup
+- Recycle Bin emptying
+- Downloads folder organization (old files)
+- Modular execution (separate scripts)
+- Automatic log generation
+- Compatible with Windows PowerShell 5.1+
 
 ---
 
-## 📌 Possíveis melhorias futuras
-- Barra de progresso
-- Agendamento automático
-- Empacotamento em .exe
+## 🛡️ Notes
 
+- Scripts use only native Windows commands
+- Project uses ASCII characters only (corporate-environment friendly)
+- It is recommended to test the scripts before using them in production
 
-O comportamento do script pode ser controlado no arquivo `config.ps1` através da variável `$DRY_RUN`, onde `true` executa apenas simulações (sem remover arquivos) e `false` realiza a limpeza efetiva.
+---
+
+## 📌 Possible Future Improvements
+- Progress bar
+- Automatic scheduling
+- Packaging as an .exe
+
+The script behavior can be controlled in the `config.ps1` file through the `$DRY_RUN` variable, where `true` runs in simulation mode (no files are removed) and `false` performs the actual cleanup.
+
+---
+
+## ▶️ How to Run
+
+To execute the tool, open PowerShell and run the following commands:
+> `Set-ExecutionPolicy Bypass -Scope Process`
+> `./run.ps1`

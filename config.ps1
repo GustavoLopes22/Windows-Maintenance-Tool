@@ -1,5 +1,5 @@
 # true  = simulação / false = execução real
-$DRY_RUN = $true
+$DRY_RUN = $false
 
 $DAYS_OLD_DOWNLOADS = 30
 $MOVE_INSTEAD_DELETE = $true

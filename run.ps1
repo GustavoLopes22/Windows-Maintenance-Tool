@@ -13,10 +13,8 @@ Write-Host @"
  WINDOWS MAINTENANCE TOOL
 "@ -ForegroundColor Cyan
 
-# Carrega config
 . .\config.ps1
 
-# Garante pasta de log
 if (!(Test-Path ".\logs")) {
     New-Item -ItemType Directory -Path ".\logs" | Out-Null
 }
@@ -25,7 +23,6 @@ $logFile = ".\logs\WMT_$(Get-Date -Format 'yyyy-MM-dd_HH-mm-ss').log"
 
 Start-Transcript -Path $logFile -Append | Out-Null
 
-# Executa módulos
 . .\clean\temp.ps1
 . .\clean\recyclebin.ps1
 . .\clean\downloads.ps1
@@ -33,6 +30,6 @@ Start-Transcript -Path $logFile -Append | Out-Null
 Stop-Transcript | Out-Null
 
 Write-Host ""
-Write-Host "Processo finalizado com sucesso!" -ForegroundColor Green
+Write-Host "All tasks completed." -ForegroundColor Green
 
-Write-Host "Log salvo em $logFile" -ForegroundColor Yellow
+Write-Host "Log saved at: $logFile" -ForegroundColor DarkGray
